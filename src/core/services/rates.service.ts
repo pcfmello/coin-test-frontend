@@ -1,7 +1,7 @@
 import httpConfig from '../../auth/http-config';
 
-const getAll = () => {
-  return httpConfig.get<Array<any>>('/rates');
+const getAll = async () => {
+  return await httpConfig.get('/rates');
 };
 
 const RatesService = {

@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
+import { RatesList } from '../models/rates.model';
 import RatesService from '../services/rates.service';
 
 const useRates = () => {
-  const [rates, setRates] = useState([]);
+  const [rates, setRates] = useState<RatesList[]>([]);
 
   useEffect(() => {
     getRates();
   }, []);
 
   const getRates = () => {
-    RatesService.getAll().then((data: any) => setRates(data));
+    RatesService.getAll().then(({ data }) => {
+      setRates(data.data);
+      console.log(data.data);
+    });
   };
-
-  console.log(status);
 
   return [rates];
 };
