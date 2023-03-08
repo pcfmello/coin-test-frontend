@@ -1,8 +1,8 @@
-import axios from "axios";
+import axios from 'axios';
 
 export default axios.create({
-  baseURL: "http://api.coincap.io/v2",
+  baseURL: 'http://api.coincap.io/v2',
   headers: {
-    "Content-type": "application/json",
-  },
+    'Content-type': 'application/json'
+  }
 });
