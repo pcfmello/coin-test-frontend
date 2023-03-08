@@ -15,11 +15,10 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           Learn React
         </a>
-        
+
         <Button variant="contained">Hello World</Button>
       </header>
     </div>
