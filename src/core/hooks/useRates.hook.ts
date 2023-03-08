@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import RatesService from '../services/rates.service';
 
 const useRates = () => {
-  const [status, setStatus] = useState('false');
   const [rates, setRates] = useState([]);
 
   useEffect(() => {
@@ -15,7 +14,7 @@ const useRates = () => {
 
   console.log(status);
 
-  return [status, rates];
+  return [rates];
 };
 
 export default useRates;
